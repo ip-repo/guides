@@ -99,5 +99,32 @@ Session# 1
 Memory Usage: 19,072K
 **********************************************************************
 ```
+Now that we have the active connection information we can output it to a csv file:
 
+```python
+import csv
+with open('active_connections.csv', mode='w') as connection_csv:
+    fileds_names = ["Protocol", "Local Address", "Forigen Address", "State", "Image Name",
+                    "PID", "Session Name", "Session#", "Memory Usage"]
+    writer = csv.DictWriter(f=connection_csv, fieldnames=fileds_names)
+    writer.writeheader()
+    for connection_dict in connection_dicts:
+        for key in connection_dict.keys():
+            data_to_write = {
+                            fileds_names[0] :connection_dict[key][0][0],
+                            fileds_names[1] :connection_dict[key][0][1],
+                            fileds_names[2] :connection_dict[key][0][2],
+                            fileds_names[3] :connection_dict[key][0][3],
+                            fileds_names[4] :connection_dict[key][1][0],
+                            fileds_names[5] :connection_dict[key][1][1],
+                            fileds_names[6] :connection_dict[key][1][2],
+                            fileds_names[7] :connection_dict[key][1][3],
+                            fileds_names[8] :connection_dict[key][1][4] + connection_dict[key][1][5]
+                            
+                            }
+         
+            writer.writerow(data_to_write)
 
+```
+Output should be a csv file with all the active connections we gathered.
+<img src="tcp_csv.png"></img>
