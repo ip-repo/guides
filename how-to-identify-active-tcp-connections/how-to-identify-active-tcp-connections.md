@@ -58,7 +58,6 @@ active_connection_list = os.popen('netstat -a -o').read().split("\n")
 connection_dicts = []
 for connection in active_connection_list[4:-1]:
     connection_values = [value for value in connection.split(" ") if value]
-
     pid = connection_values[-1]
     connection_values = connection_values[:-1]
     new_connection_dict = {}
