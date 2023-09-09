@@ -1,4 +1,4 @@
-<h2>How to identify active connection by pid using netstat and tasklist on windows 10</h2>
+<h2>How to identify active connections by pid using netstat and tasklist on windows 10</h2>
 So, on windows if we want to see tcp connections we can use <b>netstat</b>. <br>
 Lets say were using the command:
 
