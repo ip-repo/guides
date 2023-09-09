@@ -85,7 +85,7 @@ for connection_dict in connection_dicts:
     print("*" * 70)
 
 ```
-Now, yo should see a list of active connection and the process name and combined information from the two commands.
+Now, you should see a list of active connection and the process name and combined information from the two commands.
 
 ```console
 **********************************************************************
