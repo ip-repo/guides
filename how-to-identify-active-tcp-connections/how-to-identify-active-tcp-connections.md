@@ -43,8 +43,8 @@ The problem with the commands 1 and 2 is that you need administrator privileges 
 Lets see how we can use <b>netstat -a -o</b> which do not require administrator privileges to generate a list of active connections.<br>
 Then we can iterate that list and use the command <b>tasklist /FI "PID eq 0000" -[commandname][operation][condition-process id to find]</b> to get the process information (including the image name).<br>
 Next we can print the information line by line:
-<b>Information from netstat -a -o</b> + <b>information from tasklist /FI "PID eq 0000" </b>
-This should give the user the active tcp connections image name with some additonal info.
+<b>Information from netstat -a -o</b> + <b>information from tasklist /FI "PID eq 0000"</b>.<br>
+This should give the user the active tcp connections image name with some additonal information.
 
 <h3>Python</h3>
 
@@ -84,7 +84,8 @@ for connection_dict in connection_dicts:
     print("*" * 70)
 
 ```
-Now, you should see a list of active connection and the process name and combined information from the two commands.
+Now, you should get a list of active connection with all the information accumulated about them from both commands. 
+
 
 ```console
 **********************************************************************
