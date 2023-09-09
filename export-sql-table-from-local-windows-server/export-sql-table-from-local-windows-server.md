@@ -1,5 +1,7 @@
 ## How to export a table from local MySQL server into a csv/text file? (On Windows 10) 
-So you have a running MySQL server and you might even created a database that has tables to achive our goal follow this steps:
+So you have a running MySQL server and you might even created a database that has tables but now you want to export the data ...
+
+To achive our goal follow this steps:
 * First open MySQL Cli and access the server then create database and add a table.
 * Find the server my.ini file
 * Add a option that allow I/O operation to my.ini
@@ -19,17 +21,17 @@ INSERT INTO my_table(some_data) VALUES('Wow');
 INSERT INTO my_table(some_data) VALUES('Excellent');
 ```
 Now lets be naive and try to write the table to a csv file.
-
 ```sql
 SELECT * INTO OUTFILE 'my_csv.csv' FROM my_table;
 ```
 The error that we get means that server isn't allowd to preform I/O operation so we need to bypass that and to do that we will need to update a deticated file.
-
 ```sql
 ERROR [error_number] (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
 ```
 The .ini files contains configuration information about user's preferences and operating environmet.
-The file that we need to alter can be found mostly in C:\ProgramData\MySQL\MySQL Server [version]\my.ini .
+
+The file that we need to alter can be found mostly in C:\ProgramData\MySQL\MySQL Server [version]\my.ini.
+
 So one can change the file manualy like any text file, just open it and add the two lines below.
 Note: access can be denied so make sure that user has permmisions to do that operation.
 
@@ -62,15 +64,14 @@ Set-ExecutionPolicy RemoteSigned
 ```
 We need to restart the MySQL[version] service
 <img src="service.jpg"></img>
-Now everything is set and its time to create our csv file. Open the
+Now everything is set and its time to export our table as  csv file.
 ```sql
 SELECT * INTO OUTFILE 'my_table.csv' FIELDS TERMINATED BY ','OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' FROM table;
 ```
 Now our file is created, but where is it?
 MySQL server dont create the file by default on the local machine it will be created on the server data file and can be found inside the specific database folder
-
 <img src="thefile.jpg"></img>
-dont forget to disable scripts on power PowerShell
+Dont forget to disable scripts on power PowerShell
 ```powerhsell
 Set-ExecutionPolicy Restricted
 ```
