@@ -33,7 +33,7 @@ The file that we need to alter can be found mostly in C:\ProgramData\MySQL\MySQL
 So one can change the file manualy like any text file, just open it and add the two lines below.
 Note: access can be denied so make sure that user has permmisions to do that operation.
 
-pic pic 
+![](thefile.jpg)
 
 ```sql
 #add to my.ini 
