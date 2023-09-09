@@ -28,8 +28,8 @@ The error that we get means that server isn't allowd to preform I/O operation so
 ```sql
 ERROR [error_number] (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
 ```
-The .ini files contains configuration information about user's preferences and operating environmet.
-The file that we need to alter can be found mostly in C:\ProgramData\MySQL\MySQL Server [version]\my.ini.
+The .ini files contains configuration information about user's preferences and operating environmet.<br>
+The file that we need to alter can be found mostly in C:\ProgramData\MySQL\MySQL Server [version]\my.ini.<br>
 So one can change the file manualy like any text file, just open it and add the two lines below.<br>
 Note: access can be denied so make sure that user has permmisions to do that operation.
 
@@ -40,7 +40,7 @@ Note: access can be denied so make sure that user has permmisions to do that ope
 [mysqld]
 secure_file_priv = ""
 ```
-The method above will work but lets create a PowerShell script to automate this task.
+The method above will work but lets create a PowerShell script to automate this task.<br>
 Create a text file and add the following commands and make sure to save as .ps1 file.
 ```powershell
 Write-Host Updating --secure-file-priv option...
