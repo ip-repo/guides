@@ -69,7 +69,7 @@ SELECT * INTO OUTFILE 'my_table.csv' FIELDS TERMINATED BY ','OPTIONALLY ENCLOSED
 Now our file is created, but where is it?
 MySQL server dont create the file by default on the local machine it will be created on the server data file and can be found inside the specific database folder
 
-<img src="thefile.jpg"></img>c
+<img src="thefile.jpg"></img>
 dont forget to disable scripts on power PowerShell
 ```powerhsell
 Set-ExecutionPolicy Restricted
