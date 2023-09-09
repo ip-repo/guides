@@ -15,7 +15,7 @@ Active Connections
   TCP    0.0.0.0:345            username:0                LISTENING
 ```
 So now we can see the active connections but we need more information in order to identify the process easliy.<br>
-Lets say you want to know PID and process name ?<br>
+Lets say you want to know PID and process name.<br>
 The -b option will allow to know the process name and the -abon options will also show the PID.
 ```console
 netstat -b #1
