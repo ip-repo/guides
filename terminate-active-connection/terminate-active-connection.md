@@ -20,6 +20,8 @@ The -b option will allow to know the process name and the -abon options will als
 ```console
 netstat -b #1
 netstat -abon #2
+netstat -a -o #3
+tasklist /FI "PID eq 9624"
 ```
 
 ```console
@@ -29,7 +31,47 @@ netstat -abon #2
 #2 result
   TCP    0.0.0.0:0000        000.000.000.000:000    ESTABLISHED     9624
  [chrome.exe]
+#3 result
+ TCP    0.0.0.0:00000          username:0                LISTENING       820
+#4 result
+Image Name                     PID Session Name        Session#    Mem Usage
+========================= ======== ================ =========== ============
+chrome.exe                    9624 Console                    1     00,00 K
 ```
 
-The problem with those commands is that you need administrator privileges to execute them.<br>
-Lets commbine the commands <b>netstat and tasklist with python </b> to create a script the will allow us to know the active tcp connection pid and name with some more information. 
+The problem with those commands 1 and 2 is that you need administrator privileges to execute them.<br>
+
+Lets see how we can use <b>netstat -a -o</b> which do not require administrator privilege to generate a list of active connections.<br>
+Then we can iterate the list and use the command <b>tasklist /FI "PID eq 0000" -[commandname][operation][condition][process id to find]</b>.<br>
+Next we can print the information line by line:
+<b>Information from netstat -a -o</b> + <b>information from tasklist /FI "PID eq 0000" </b>
+This should give the user the active tcp connections image name with some additonal info.
+
+<h3>Python</h3>
+
+```python
+import os
+LINE = '-' * 100 
+net_stat = os.popen('netstat -a -o').read()
+active_connections = net_stat.split('\n')
+print(LINE)
+for connection in active_connections[4:-1]:
+    output = os.popen('tasklist /FI "PID eq {}"'.format(connection.split(' ')[-1])).read().split('\n')
+    output = output[1] + '\n' +  output[3] 
+    print(LINE)
+    print(active_connections[3].lstrip() + '\n' + connection.lstrip() + '\n')
+
+    print(output + '\n')
+    print(LINE)
+print(LINE)
+print('Ctrl + C to exit :D')
+while True:
+    try:
+       continue
+    except KeyboardInterrupt:
+        break
+```
+
+
+
+
