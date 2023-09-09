@@ -16,7 +16,7 @@ Active Connections
 ```
 So now we can see the active connections but we need more information in order to identify the process easliy.
 Lets say you want to know PID and process name ?
-The -b option will allow to know the process name and the -abon optins will also show the PID.
+The -b option will allow to know the process name and the -abon options will also show the PID.
 ```console
 netstat -b #1
 netstat -abon #2
@@ -31,5 +31,5 @@ netstat -abon #2
  [chrome.exe]
 ```
 
-The problem with those command is that you need administrator privileges to execute them.
+The problem with those commands is that you need administrator privileges to execute them.
 Lets commbine the commands <b>netstat and tasklist with python </b> to create a script the will allow us to know the active tcp connection pid and name with some more information. 
