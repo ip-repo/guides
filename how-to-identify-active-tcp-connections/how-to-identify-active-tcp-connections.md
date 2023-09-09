@@ -135,11 +135,11 @@ we get it then we can use the command <b>taskkil /F /PID process_number</b> to d
 ```python
 while True:
     try:
-       pid_to_delete = input("Enter pid to terminate (or -1 to exit):")
-       if pid_to_delete == "-1":
+       pid_to_terminate = input("Enter pid to terminate (or -1 to exit):")
+       if pid_to_terminate == "-1":
            print("Bye Bye")
            break
-       command = "taskkill /F /PID {}".format(pid_to_delete)
+       command = "taskkill /F /PID {}".format(pid_to_terminate)
        command_result = os.popen(command).read()
        print(command_result)
     except KeyboardInterrupt:
