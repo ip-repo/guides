@@ -33,7 +33,7 @@ The file that we need to alter can be found mostly in C:\ProgramData\MySQL\MySQL
 So one can change the file manualy like any text file, just open it and add the two lines below.
 Note: access can be denied so make sure that user has permmisions to do that operation.
 
-![](thefile.jpg)
+<img src="denied.jpg"></img>
 
 ```sql
 #add to my.ini 
@@ -61,7 +61,7 @@ Set-ExecutionPolicy RemoteSigned
 
 ```
 We need to restart the MySQL[version] service
-pic
+<img src="service.jpg"></img>
 Now everything is set and its time to create our csv file. Open the
 ```sql
 SELECT * INTO OUTFILE 'my_table.csv' FIELDS TERMINATED BY ','OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' FROM table;
@@ -69,7 +69,7 @@ SELECT * INTO OUTFILE 'my_table.csv' FIELDS TERMINATED BY ','OPTIONALLY ENCLOSED
 Now our file is created, but where is it?
 MySQL server dont create the file by default on the local machine it will be created on the server data file and can be found inside the specific database folder
 
-pic
+<img src="thefile.jpg"></img>c
 dont forget to disable scripts on power PowerShell
 ```powerhsell
 Set-ExecutionPolicy Restricted
