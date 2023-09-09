@@ -30,8 +30,7 @@ ERROR [error_number] (HY000): The MySQL server is running with the --secure-file
 ```
 The .ini files contains configuration information about user's preferences and operating environmet.
 The file that we need to alter can be found mostly in C:\ProgramData\MySQL\MySQL Server [version]\my.ini.
-So one can change the file manualy like any text file, just open it and add the two lines below.
-
+So one can change the file manualy like any text file, just open it and add the two lines below.<br>
 Note: access can be denied so make sure that user has permmisions to do that operation.
 
 <img src="denied.jpg"></img>
