@@ -128,3 +128,22 @@ with open('active_connections.csv', mode='w') as connection_csv:
 ```
 Output should be a csv file with all the active connections we gathered.
 <img src="tcp_csv.png"></img>
+
+We can add a while loop to wait for the user input about which PID he want to terminate and when
+we get it then we can use the command <b>taskkil /F /PID process_number</b> to do just that.
+
+```python
+while True:
+    try:
+       pid_to_delete = input("Enter pid to terminate (or -1 to exit):")
+       if pid_to_delete == "-1":
+           print("Bye Bye")
+           break
+       command = "taskkill /F /PID {}".format(pid_to_delete)
+       command_result = os.popen(command).read()
+       print(command_result)
+    except KeyboardInterrupt:
+        print("Bye-Bye")
+        break
+
+```
