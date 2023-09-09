@@ -42,7 +42,7 @@ chrome.exe                    9624 Console                    1     00,00 K
 The problem with those commands 1 and 2 is that you need administrator privileges to execute them.<br>
 
 Lets see how we can use <b>netstat -a -o</b> which do not require administrator privilege to generate a list of active connections.<br>
-Then we can iterate the list and use the command <b>tasklist /FI "PID eq 0000" -[commandname][operation][condition][process id to find]</b>.<br>
+Then we can iterate the list and use the command <b>tasklist /FI "PID eq 0000" -[commandname][operation][condition-process id to find]</b>.<br>
 Next we can print the information line by line:
 <b>Information from netstat -a -o</b> + <b>information from tasklist /FI "PID eq 0000" </b>
 This should give the user the active tcp connections image name with some additonal info.
