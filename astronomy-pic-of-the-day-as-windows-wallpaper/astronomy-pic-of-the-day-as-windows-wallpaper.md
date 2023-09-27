@@ -7,8 +7,8 @@ The goal is to navigate to <a href= "https://apod.nasa.gov/apod/astropix.html">n
 * python                    3.10.6
 * selenium                  4.7.2
 * requests                  2.28.1
-
-First lets import libraries.
+  
+Import libraries.
 ```python
 
 import time
