@@ -1,7 +1,5 @@
-# guides
-A collection of how-to guides and examples.
+# A collection of how-to guides and examples
 
-<hr2>How to use the repo</h2>
 
 Each folder in this repo is dedicated to a guide or an example.<br>
 Github doesn't let you download a specific directory or file
