@@ -1,6 +1,20 @@
 # guides
 A collection of how-to guides and examples.
 
+<hr2>How to use the repo</h2>
+
+Each folder in this repo is dedicated to a guide or an example.<br>
+Github doesn't let you download a specific directory or file
+so you can use <a href="https://download-directory.github.io/">download-directory.github.io</a> to download a directory.
+```
+📁guide_1
+  file.ext
+  file.ext
+  GUIDE_1.md
+📁guide_2
+📁example_1
+README.md
+```
 <hr>
 <h3>Windows</h3>
 
