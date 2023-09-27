@@ -2,11 +2,10 @@
 
 
 Each folder in this repo is dedicated to a guide or an example.<br>
-Github doesn't let you download a specific directory or file
-so you can use <a href="https://download-directory.github.io/">download-directory.github.io</a> to download a directory or clone the entire repo.
+If you want to download a specific directory or file you can use <a href="https://download-directory.github.io/">download-directory.github.io</a> to download a directory or clone the entire repo.
 ```
 📁guide_1
-  file.ext
+  file.extT
   file.ext
   GUIDE_1.md
 📁guide_2
@@ -16,7 +15,7 @@ README.md
 <hr>
 <h3>Windows</h3>
 
-* <a href="https://github.com/ip-repo/guides/blob/main/how-to-identify-active-tcp-connections/how-to-identify-active-tcp-connections.md">How to identify active tcp connections on windows 10 with python</a>
+* <a href="https://github.com/ip-repo/guides/blob/main/how-to-identify-active-tcp-connections/how-to-identify-active-tcp-connections.md">How to identify active tcp connections on windows with python</a>
 
 * <a href="https://github.com/ip-repo/guides/blob/main/export-sql-table-from-local-windows-server/export-sql-table-from-local-windows-server.md">How to export a table from local MySQL server into a csv/text file</a>
 
