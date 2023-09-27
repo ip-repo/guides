@@ -8,3 +8,4 @@ A collection of how-to guides and examples.
 
 * <a href="https://github.com/ip-repo/guides/blob/main/export-sql-table-from-local-windows-server/export-sql-table-from-local-windows-server.md">How to export a table from local MySQL server into a csv/text file</a>
 
+* <a href="https://github.com/ip-repo/guides/blob/main/astronomy-pic-of-the-day-as-windows-wallpaper/astronomy-pic-of-the-day-as-windows-wallpaper.md">Set nasa astronomy picture of the day as windows wallpaper with selenium and python</a>
