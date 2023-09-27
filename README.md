@@ -5,7 +5,7 @@ Each folder in this repo is dedicated to a guide or an example.<br>
 If you want to download a specific directory or file you can use <a href="https://download-directory.github.io/">download-directory.github.io</a> to download a directory or clone the entire repo.
 ```
 📁guide_1
-  file.extT
+  file.ext
   file.ext
   GUIDE_1.md
 📁guide_2
