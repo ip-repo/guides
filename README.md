@@ -22,5 +22,5 @@ README.md
 * <a href="https://github.com/ip-repo/guides/blob/main/astronomy-pic-of-the-day-as-windows-wallpaper/astronomy-pic-of-the-day-as-windows-wallpaper.md">How to set nasa astronomy picture of the day as windows wallpaper with selenium and python</a>
 
 <h3>Python</h3>
-<a href="https://github.com/ip-repo/guides/blob/main/simple-command-server-client/command-client-server.md">
+* <a href="https://github.com/ip-repo/guides/blob/main/simple-command-server-client/command-client-server.md">
 How to shutdown windows pc from android phone with termux </a>
