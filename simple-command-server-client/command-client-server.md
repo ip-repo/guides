@@ -1,4 +1,4 @@
-# socket programming: shutdown windows pc from android phone
+# shutdown windows pc from android phone
 
 The idea is simple.
 
