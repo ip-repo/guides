@@ -71,7 +71,8 @@ class TextToSpeechWidget(QWidget):
 					subprocess.run(["gtts-cli", text[:self.text_max_len],"--output", file_name, "-l", lang])
 				t1_stop = time.perf_counter()
 				print("exection time:",t1_stop - t1_start, "seconds")
-			self.setEnabled(True)	
+			self.setEnabled(True)
+			self.setWindowTitle("Saved: {}".format(file_name))	
 		else:
 			self.setWindowTitle("Can't convert nothing....")
 	
@@ -83,7 +84,10 @@ class TextToSpeechWidget(QWidget):
 		if filename:
 			with open(filename, "w") as f:
 				f.write(text)
-			self.setEnabled(True)	
+			self.setEnabled(True)
+			self.setWindowTitle("Saved: {}".format(filename))
+		
+			
 
 
 
