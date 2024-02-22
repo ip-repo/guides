@@ -80,27 +80,27 @@ class TextToSpeechWidget(QWidget):
 Next we will create a method to init the ui.
 
 ```python
-    def init_ui(self):
-        self.setWindowTitle("Welcome to TextToSpeech")
-        self.setWindowIcon(QIcon("logo.png"))
+	def init_ui(self):
+		self.setWindowTitle("Welcome to TextToSpeech")
+		self.setWindowIcon(QIcon("logo.png"))
 		self.setGeometry(0,0, 600,400)
 		controls_layout = QHBoxLayout()
 		controls_layout.setSpacing(2)
-        #select language 
+		#select language 
 		self.lang_box = QComboBox()
 		self.lang_box.addItems(self.reverse_lang_dict.keys())
-        #save text
+		#save text
 		self.save_text_btn =QPushButton("save text")
-        #save speech
+		#save speech
 		self.save_speech_btn = QPushButton("save audio")
-        #set slow speech
+		#set slow speech
 		self.slow = QCheckBox("slow")
 		controls_layout.addWidget(self.lang_box, 3)
 		controls_layout.addWidget(self.slow,1//4)
 		controls_layout.addWidget(self.save_text_btn, 1)
 		controls_layout.addWidget(self.save_speech_btn, 1)
 		main_layout = QVBoxLayout()
-        #text container
+		#text container
 		self.text_edit = QTextEdit()
 		main_layout.addLayout(controls_layout,1)
 		main_layout.addWidget(self.text_edit, 10)
@@ -109,77 +109,77 @@ Next we will create a method to init the ui.
 ```
 Now can create a text object or a language dictionary
 ```python
-    def init_objects(self):
-        #this number is the maximum characters that will be processed from text edit widget
-		self.text_max_len = 5000
-        #languages dictionary for combo box and gtts
-		self.lang_dict = gtts.lang.tts_langs()
-		self.reverse_lang_dict = {}
-		for key in self.lang_dict.keys():
-			self.reverse_lang_dict[self.lang_dict[key]] = key
-        #file handler
-		self.file_dialog = QFileDialog()
+def init_objects(self):
+	#this number is the maximum characters that will be processed from text edit widget
+	self.text_max_len = 5000
+	#languages dictionary for combo box and gtts
+	self.lang_dict = gtts.lang.tts_langs()
+	self.reverse_lang_dict = {}
+	for key in self.lang_dict.keys():
+		self.reverse_lang_dict[self.lang_dict[key]] = key
+	#file handler
+	self.file_dialog = QFileDialog()
 ```
 We have created qt object that has signals and this will help us react to user input.
 ```python
-    def init_signals(self):
-        #save speech clicked
-		self.save_speech_btn.clicked.connect(self.save_speech_btn_clicked)
-        #save text clicked
-		self.save_text_btn.clicked.connect(self.save_txt_btn_clicked)
+def init_signals(self):
+	#save speech clicked
+	self.save_speech_btn.clicked.connect(self.save_speech_btn_clicked)
+	#save text clicked
+	self.save_text_btn.clicked.connect(self.save_txt_btn_clicked)
 ```
 The signlas are linked to methods that get executed when buttons are clicked.
 ```python
-    def save_speech_btn_clicked(self):
-        #get the text in the text container
-		text = self.text_edit.toPlainText()
-		if text:
-            #disable widget
-			self.setDisabled(True)
-			self.setWindowTitle("Working on it....")
-            #test if user want a slow speech
-			if self.slow.checkState().value == 2:
-				slow = True
-			else:
-				slow = False
-            #find out which language to use 
-			lang = self.reverse_lang_dict[self.lang_box.currentText()]
-            #prepare saving path
-			file_name, _ = self.file_dialog.getSaveFileName(None,"Save speech as audio",
-            "output.mp3","MP3 (*.mp3);;WAV (*.wav);;")
-			if file_name:
-                #time to creation time
-				t1_start = time.perf_counter()
-                #create audio file with gtts-cli
-				if slow:
-					subprocess.run(["gtts-cli", text[:self.text_max_len],"--slow", "--output", file_name, "-l", lang])
-				else:
-					subprocess.run(["gtts-cli", text[:self.text_max_len],"--output", file_name, "-l", lang])
-                #end time
-				t1_stop = time.perf_counter()
-				print("exection time:",t1_stop - t1_start, "seconds")
-            #enable widget
-			self.setEnabled(True)
-			self.setWindowTitle("Saved: {}".format(file_name))		
-		else:
-			self.setWindowTitle("Can't convert nothing....")
-	
-	def save_txt_btn_clicked(self):
-        #disable widget
+def save_speech_btn_clicked(self):
+	#get the text in the text container
+	text = self.text_edit.toPlainText()
+	if text:
+		#disable widget
 		self.setDisabled(True)
-        #prepare text and cut up to the maximum length
-		text = self.text_edit.toPlainText()[:self.text_max_len]
-        #prepare saving path
-		filename,_ = self.file_dialog.getSaveFileName(None,"Save as text file","output.txt",
-        "Text Files (*.txt)")
-		if filename:
-            #save text file
-			with open(filename, "w") as f:
-				f.write(text)
-            #enable widget
-			self.setEnabled(True)
-			self.setWindowTitle("Saved: {}".format(filename))
-				
+		self.setWindowTitle("Working on it....")
+		#test if user want a slow speech
+		if self.slow.checkState().value == 2:
+			slow = True
+		else:
+			slow = False
+		#find out which language to use 
+		lang = self.reverse_lang_dict[self.lang_box.currentText()]
+		#prepare saving path
+		file_name, _ = self.file_dialog.getSaveFileName(None,"Save speech as audio",
+		"output.mp3","MP3 (*.mp3);;WAV (*.wav);;")
+		if file_name:
+			#time to creation time
+			t1_start = time.perf_counter()
+			#create audio file with gtts-cli
+			if slow:
+				subprocess.run(["gtts-cli", text[:self.text_max_len],"--slow", "--output", file_name, "-l", lang])
+			else:
+				subprocess.run(["gtts-cli", text[:self.text_max_len],"--output", file_name, "-l", lang])
+			#end time
+			t1_stop = time.perf_counter()
+			print("exection time:",t1_stop - t1_start, "seconds")
+		#enable widget
+		self.setEnabled(True)
+		self.setWindowTitle("Saved: {}".format(file_name))		
+	else:
+		self.setWindowTitle("Can't convert nothing....")
+
+def save_txt_btn_clicked(self):
+	#disable widget
+	self.setDisabled(True)
+	#prepare text and cut up to the maximum length
+	text = self.text_edit.toPlainText()[:self.text_max_len]
+	#prepare saving path
+	filename,_ = self.file_dialog.getSaveFileName(None,"Save as text file","output.txt",
+	"Text Files (*.txt)")
+	if filename:
+		#save text file
+		with open(filename, "w") as f:
+			f.write(text)
+		#enable widget
+		self.setEnabled(True)
+		self.setWindowTitle("Saved: {}".format(filename))
+			
 
 
 
