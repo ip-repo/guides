@@ -159,7 +159,8 @@ The signlas are linked to methods that get executed when buttons are clicked.
 				t1_stop = time.perf_counter()
 				print("exection time:",t1_stop - t1_start, "seconds")
             #enable widget
-			self.setEnabled(True)	
+			self.setEnabled(True)
+			self.setWindowTitle("Saved: {}".format(file_name))		
 		else:
 			self.setWindowTitle("Can't convert nothing....")
 	
