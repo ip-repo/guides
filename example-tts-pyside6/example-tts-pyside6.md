@@ -152,7 +152,7 @@ The signlas are linked to methods that get executed when buttons are clicked.
 				t1_start = time.perf_counter()
                 #create audio file with gtts-cli
 				if slow:
-					subprocess.run(["gtts-cli", text[:self.text_max_len],"--slow", "--output", file_name, "lang", lang])
+					subprocess.run(["gtts-cli", text[:self.text_max_len],"--slow", "--output", file_name, "-l", lang])
 				else:
 					subprocess.run(["gtts-cli", text[:self.text_max_len],"--output", file_name, "-l", lang])
                 #end time
