@@ -177,7 +177,9 @@ The signlas are linked to methods that get executed when buttons are clicked.
 			with open(filename, "w") as f:
 				f.write(text)
             #enable widget
-			self.setEnabled(True)	
+			self.setEnabled(True)
+			self.setWindowTitle("Saved: {}".format(filename))
+				
 
 
 
