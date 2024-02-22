@@ -7,18 +7,18 @@
 
 First we need to install to python libraries: PySide6 and gtts.
 ```
-git clone
-cd into example
+#python 3.12
+git clone https://github.com/ip-repo/guides.git
+cd example-tts-pyside6
 python -m venv ttsv
 ttsv\Scripts\activate
-pip install PySide6
-pip install gtts
-python run.py
+pip install PySide6 #6.6.2
+pip install gtts #2.5.1
 ```
 
 </details>
 
-<details><summary>Quick gtts and python overview</summary>
+<details><summary>Quick gtts overview</summary>
 
 Basic usage
 ```
@@ -56,7 +56,7 @@ myobj.save("vietnamese.mp3")
 
 ```
 </details>
-<details><summary>PySide6 and gtts</summary>
+<details><summary>Example 1: PySide6 and gtts</summary>
 Lets start by importing the necessary objects and creating a class for our widget.
 
 ```python
@@ -193,6 +193,10 @@ if __name__ == "__main__":
 	app_widget.text_max_len = 10000
 	app_widget.show()
 	app.exec()
+```
+If you have created a venv and installed the required libraries you can now Run the file **widget_one_run.py**
+```python
+(ttsv)python widget_one_run.py
 ```
 This will work well depending on your hardware and can take a long time to process try remaining around 5000 characters.
 While the speech is being processed the widget is unavailable.
