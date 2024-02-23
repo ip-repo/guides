@@ -56,7 +56,7 @@ myobj.save("vietnamese.mp3")
 
 ```
 </details>
-<details><summary>Example 1: PySide6 and gtts</summary>
+<details><summary>Example 1: a gtts based widget that can save text as audio file in different languages</summary>
 Lets start by importing the necessary objects and creating a class for our widget.
 
 ```python
@@ -205,3 +205,26 @@ This will work well depending on your hardware and can take a long time to proce
 While the speech is being processed the widget is unavailable.
 It might seem surprising but 10000 characters can turn into a audio file of 15 mins.
 </details>
+
+<details>
+	<summary>Example 2: QTextToSpeech based widget that read allowd text and can be tweaked to some degree</summary>
+Lets start by importing the necessary objects and creating a class for our widget.
+	
+```python
+from PySide6.QtTextToSpeech import QTextToSpeech
+from PySide6.QtWidgets import (QApplication,QStyleFactory, QWidget,QSpinBox, QFileDialog, QHBoxLayout,QVBoxLayout, 
+								QTextEdit, QPushButton, QComboBox,QLabel)
+from PySide6.QtGui import QIcon
+
+class TextToSpeetQt(QWidget):
+	def __init__(self, *args, **kargs) -> None:
+		super().__init__(*args, **kargs)
+		self.init_ui()
+		self.init_objects()
+		self.init_signals()
+
+```
+
+ 
+</details>
+
