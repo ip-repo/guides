@@ -1,5 +1,5 @@
 from PySide6.QtTextToSpeech import QTextToSpeech
-from PySide6.QtWidgets import (QApplication,QStyleFactory, QWidget,QSlider,QSpinBox, QFileDialog, QHBoxLayout,QVBoxLayout, 
+from PySide6.QtWidgets import (QApplication,QStyleFactory, QWidget,QSpinBox, QFileDialog, QHBoxLayout,QVBoxLayout, 
 								QTextEdit, QPushButton, QComboBox,QLabel)
 from PySide6.QtGui import QIcon
 
