@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (QApplication,QStyleFactory, QWidget,QSpinBox, QFi
 from PySide6.QtGui import QIcon
 
 
-class TextToSpeetQt(QWidget):
+class TextToSpeech(QWidget):
 	def __init__(self, *args, **kargs) -> None:
 		super().__init__(*args, **kargs)
 		self.init_ui()
@@ -125,7 +125,7 @@ class TextToSpeetQt(QWidget):
 if __name__ == "__main__":
 	app = QApplication()
 	app.setStyle(QStyleFactory.keys()[2])
-	app_widget = TextToSpeetQt()
+	app_widget = TextToSpeech()
 	app_widget.show()
 	app.exec()
    
