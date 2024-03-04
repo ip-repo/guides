@@ -194,20 +194,7 @@ def save_txt_btn_clicked(self):
 
 
 ```
-And now we can create out widget and launch it.
-```python 
-if __name__ == "__main__":
-    #create application instance
-	app = QApplication()
-    #set application style
-	app.setStyle(QStyleFactory.keys()[2])
-	app_widget = TextToSpeechWidget()
-	#maximum characters length to process to speech 
-	app_widget.text_max_len = 10000
-	app_widget.show()
-	app.exec()
-```
-If you have created a venv and installed the required libraries you can now Run the file **widget_one_run.py**
+If you have created a venv and installed the required libraries you can now Run the file `gtts_widget_run.py`
 ```python
 (ttsv)python gtts_widget_run.py
 ```
@@ -353,17 +340,6 @@ def create_nice_html(self,current: str, color: str="yellow",words_color: str="wh
 			other_word = "<font color={}>{}</font>".format(words_color, word)
 			res+=other_word + " "
 	self.label1.setText(res)
-```
-
-```python
-if __name__ == "__main__":
-	app = QApplication()
-	app.setStyle(QStyleFactory.keys()[2])
-	app_widget = TextToSpeech()
-	app_widget.show()
-	app.exec()
-   
-
 ```
 If you have created a venv and installed the required libraries you can now run the file `qt_widget_run.py`
 ```python
