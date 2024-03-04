@@ -64,7 +64,7 @@ myobj.save("vietnamese.mp3")
 
 ```
 </details>
-<details><summary>Example 1: a gtts based widget that can save text as audio file in different languages</summary>
+<details><summary>Gtts Widget</summary>
 	
 Lets start by importing the necessary objects and creating a class for our widget.
 
@@ -217,7 +217,7 @@ It might seem surprising but 10000 characters can turn into a audio file of 15 m
 </details>
 
 <details>
-	<summary>Example 2: QTextToSpeech based widget that read text aloud and can be tweaked to some degree</summary>
+	<summary>QTextToSpeech Widget</summary>
 Lets start by importing the necessary objects and creating a class for our widget.
 	
 ```python
@@ -317,7 +317,7 @@ def say(self):
 		self.tts.setPitch(self.pitch_box.value()/10.0)
 		self.tts.setRate(self.rate_box.value()/10.0)
 		self.tts.setVolume(self.volume_box.value()/10.0)
-
+	
 		self.tts.say(self.text_edit.toPlainText())
 		self.say_btn.setText("stop")	
 	else:
