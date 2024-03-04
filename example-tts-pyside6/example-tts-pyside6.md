@@ -65,6 +65,7 @@ myobj.save("vietnamese.mp3")
 ```
 </details>
 <details><summary>Example 1: a gtts based widget that can save text as audio file in different languages</summary>
+	
 Lets start by importing the necessary objects and creating a class for our widget.
 
 ```python
@@ -116,6 +117,7 @@ Next we will create a method to init the ui.
 
 ```
 Now can create a text object or a language dictionary
+
 ```python
 def init_objects(self):
 	#this number is the maximum characters that will be processed from text edit widget
@@ -235,35 +237,35 @@ class TextToSpeetQt(QWidget):
 Next we will create a method to init the ui.
 ```python
 def init_ui(self):
-		self.setWindowTitle("Welcome to TextToSpeech")
-		self.setWindowIcon(QIcon("logo.png"))
-		main_layout = QVBoxLayout()
-		controls_layout = QHBoxLayout()
-		self.open_text_btn = QPushButton("Open")
-		self.pitch_box = QSpinBox()
-		self.pitch_box.setRange(-10,10)
-		self.rate_box = QSpinBox()
-		self.rate_box.setRange(-10,10)
-		self.volume_box = QSpinBox()
-		self.volume_box.setValue(1)
-		self.volume_box.setRange(0	,10)
-		self.say_btn = QPushButton("say")
-		self.voice_box = QComboBox()
-		self.label1 = QLabel("")
-		controls_layout.addWidget(self.open_text_btn)
-		controls_layout.addWidget(self.pitch_box)
-		controls_layout.addWidget(self.rate_box)
-		controls_layout.addWidget(self.volume_box)
-		controls_layout.addWidget(self.voice_box)
-		controls_layout.addWidget(self.say_btn)
+	self.setWindowTitle("Welcome to TextToSpeech")
+	self.setWindowIcon(QIcon("logo.png"))
+	main_layout = QVBoxLayout()
+	controls_layout = QHBoxLayout()
+	self.open_text_btn = QPushButton("Open")
+	self.pitch_box = QSpinBox()
+	self.pitch_box.setRange(-10,10)
+	self.rate_box = QSpinBox()
+	self.rate_box.setRange(-10,10)
+	self.volume_box = QSpinBox()
+	self.volume_box.setValue(1)
+	self.volume_box.setRange(0	,10)
+	self.say_btn = QPushButton("say")
+	self.voice_box = QComboBox()
+	self.label1 = QLabel("")
+	controls_layout.addWidget(self.open_text_btn)
+	controls_layout.addWidget(self.pitch_box)
+	controls_layout.addWidget(self.rate_box)
+	controls_layout.addWidget(self.volume_box)
+	controls_layout.addWidget(self.voice_box)
+	controls_layout.addWidget(self.say_btn)
 
-		self.text_edit = QTextEdit()
-		main_layout.addLayout(controls_layout, 1)
-		main_layout.addWidget(self.text_edit, 9)
-		main_layout.addWidget(self.label1,1//3)
-		self.setLayout(main_layout)	
+	self.text_edit = QTextEdit()
+	main_layout.addLayout(controls_layout, 1)
+	main_layout.addWidget(self.text_edit, 9)
+	main_layout.addWidget(self.label1,1//3)
+	self.setLayout(main_layout)	
 ```
- Its to create the init_signals and objects methods.
+ Then  create the init signals and objects methods.
  ```python
 def init_signals(self):
 		self.open_text_btn.clicked.connect(self.open_text_file)
@@ -292,11 +294,11 @@ def init_objects(self):
 ```python
 def open_text_file(self):
 	file_name, _ = self.file_dialog.getOpenFileName(
-						parent=None,
-						caption="Open a text file",
-						dir=".",
-						filter="Text files (*.txt)"
-					)
+		parent=None,
+		caption="Open a text file",
+		dir=".",
+		filter="Text files (*.txt)"
+	)
 	if file_name:
 		with open(file_name, "r") as f:
 			text = f.read()
