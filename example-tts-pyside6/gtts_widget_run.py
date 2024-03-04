@@ -7,7 +7,7 @@ from PySide6.QtGui import QIcon
 import time
 import subprocess
 
-class TextToSpeechWidget(QWidget):
+class TextToSpeechGtts(QWidget):
 	def __init__(self, *args, **kargs) -> None:
 		super().__init__(*args, **kargs)
 		self.init_objects()
@@ -97,7 +97,7 @@ if __name__ == "__main__":
 	app = QApplication()
 	app.setStyle(QStyleFactory.keys()[2])
 	#print(QStyleFactory.keys())
-	app_widget = TextToSpeechWidget()
+	app_widget = TextToSpeechGtts()
 	#maximum characters length to process as speech 
 	app_widget.text_max_len = 10000
 	
