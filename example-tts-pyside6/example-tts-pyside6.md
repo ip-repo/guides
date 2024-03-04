@@ -209,7 +209,7 @@ if __name__ == "__main__":
 ```
 If you have created a venv and installed the required libraries you can now Run the file **widget_one_run.py**
 ```python
-(ttsv)python widget_one_run.py
+(ttsv)python gtts_widget_run.py
 ```
 This will work well depending on your hardware and can take a long time to process try remaining around 5000 characters.
 While the speech is being processed the widget is unavailable.
@@ -226,7 +226,7 @@ from PySide6.QtWidgets import (QApplication,QStyleFactory, QWidget,QSpinBox, QFi
 								QTextEdit, QPushButton, QComboBox,QLabel)
 from PySide6.QtGui import QIcon
 
-class TextToSpeetQt(QWidget):
+class TextToSpeech(QWidget):
 	def __init__(self, *args, **kargs) -> None:
 		super().__init__(*args, **kargs)
 		self.init_ui()
@@ -359,11 +359,15 @@ def create_nice_html(self,current: str, color: str="yellow",words_color: str="wh
 if __name__ == "__main__":
 	app = QApplication()
 	app.setStyle(QStyleFactory.keys()[2])
-	app_widget = TextToSpeetQt()
+	app_widget = TextToSpeech()
 	app_widget.show()
 	app.exec()
    
 
+```
+If you have created a venv and installed the required libraries you can now run the file `qt_widget_run.py`
+```python
+(ttsv)python qt_widget_run.py
 ```
 
 </details>
@@ -471,5 +475,9 @@ def save(self):
 			self.engine.runAndWait()
 			#enable widget
 		self.setEnabled(True)
+```
+If you have created a venv and installed the required libraries you can now run the file `pyttsx3_widget_run.py`
+```python
+(ttsv)python pyttsx3_widget_run.py
 ```
 </details>
