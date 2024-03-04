@@ -367,4 +367,109 @@ if __name__ == "__main__":
 ```
 
 </details>
+<details>
+	<summary>Pyttsx3 Widget</summary>
+	
+First lets import the modules we need.
+	
+```python
+	
+from PySide6.QtWidgets import (QApplication,QStyleFactory, QWidget,QSpinBox, QFileDialog, QHBoxLayout,QVBoxLayout, 
+								QTextEdit, QPushButton, QComboBox,QLabel)
+from PySide6.QtGui import QIcon
+import pyttsx3
+```
+Then we can create out widget class.
 
+```python
+
+class TextToSpeechPpyttsx3(QWidget):
+	def __init__(self, *args, **kargs) -> None:
+		super().__init__(*args, **kargs)
+		self.init_ui()
+		self.init_objects()
+		self.init_signals()
+```
+
+Init ui method.
+
+```
+def init_ui(self):
+	self.setWindowTitle("Welcome to TextToSpeech")
+	self.setWindowIcon(QIcon("logo.png"))
+	top_layout = QHBoxLayout()
+	self.voice_box = QComboBox()
+	self.pitch_box = QSpinBox()
+	#pitch box 
+	self.pitch_box.setRange(-10,10)
+	self.pitch_box.setValue(0)
+	#rate box range 
+	self.rate_box = QSpinBox()
+	self.rate_box.setRange(1,1000)
+	self.rate_box.setValue(200)
+	#volume box
+	self.volume_box = QSpinBox()
+	self.volume_box.setRange(0,10)
+	self.volume_box.setValue(10)
+	#save speech button
+	self.save_btn = QPushButton("save")
+	top_layout.addWidget(self.voice_box)
+	top_layout.addWidget(self.pitch_box)
+	top_layout.addWidget(self.rate_box)
+	top_layout.addWidget(self.volume_box)
+	top_layout.addWidget(self.save_btn)
+	self.text_edit = QTextEdit()
+	main_layout = QVBoxLayout()
+	main_layout.addLayout(top_layout)
+	main_layout.addWidget(self.text_edit)
+	self.setLayout(main_layout)
+```
+
+Init objects and signals.
+```python
+def init_objects(self):
+	#widget engine
+	self.engine = pyttsx3.init()
+	voices = self.engine.getProperty("voices")
+	#holds voices data
+	self.voices_dict = {}
+	#add voices to voice box
+	for i, voice in enumerate(voices):
+		self.voices_dict[voice.name] = voice.id
+		self.voice_box.addItem(voice.name)
+		if i == 0:
+			self.engine.setProperty("voice", voice.id)
+	#file dialog
+	self.file_dialog = QFileDialog()
+
+	def init_signals(self):
+		#when save button is clicked self.save is called
+		self.save_btn.clicked.connect(self.save)
+
+```
+Save text as speech file.
+
+```python
+def save(self):
+	#fetch text from text edit
+	text = self.text_edit.toPlainText()
+	#set pyttsx3 properties
+	self.engine.setProperty('pitch', (self.pitch_box.value() // 10.0))
+	self.engine.setProperty('rate', self.rate_box.value())
+	self.engine.setProperty('volume', (self.volume_box.value() // 10.0))
+	if text:
+		#disable widget
+		self.setDisabled(True)
+		#set current voice selected from voice box
+		self.engine.setProperty("voice",self.voices_dict[self.voice_box.currentText()])
+		#get saving path
+		file_name, _ = self.file_dialog.getSaveFileName(None,"Save speech as audio","output.mp3",
+											   "MP3 (*.mp3);;WAV (*.wav);;")
+		if file_name:
+			#save speech file
+			self.engine.save_to_file(text,file_name)
+			self.engine.runAndWait()
+			#enable widget
+		self.setEnabled(True)
+```
+</details>
