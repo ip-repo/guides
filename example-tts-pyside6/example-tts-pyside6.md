@@ -106,7 +106,7 @@ python pytts_cli.py 150 10.0 1 hello world
 <details>
 	<summary>QTextToSpeech</summary>
 	
-A quick text to speech widget with.
+A quick Qt tts widget.
 
 ```python
 from PySide6.QtTextToSpeech import QTextToSpeech
