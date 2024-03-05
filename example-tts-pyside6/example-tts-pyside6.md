@@ -194,3 +194,7 @@ You can listen to the result by pyttsx3.
 
 [lorem1.webm](https://github.com/ip-repo/guides/assets/123945379/540565e2-3a17-47f1-b59c-d4b9ed1319ac)
 
+  
+You can also explore other text to speech projects on this github:
+- <a href="https://github.com/ip-repo/text-to-speech-webpage/blob/main/README.md">Text to Speech webpage</a>
+- <a href="[https://github.com/ip-repo/guides/blob/main/example-tts-pyside6/example-tts-pyside6.md](https://github.com/ip-repo/conversation-maker/blob/main/README.md)https://github.com/ip-repo/conversation-maker/blob/main/README.md">PySide6 Conversation Maker</a>
