@@ -146,6 +146,21 @@ if __name__ == '__main__':
 </details>
 </details>
 
+So, we have seen three engines that we can use (there are more..) and each engines has its own functionality and limitation.
+The first widget can be found in the file `gtts_widget_run.py` if you have installed the neccesary modules just run the it.
+```console
+python gtts_widget_run.py
+```
+This widget will allow to save text as speech in mp3 or wav format but there are some limitations.
+Gtts require internet connection so it wont work offline.
+For longer tasks it might be wise to user qrunnables or qthreads.
+
+<img width="451" alt="gtts_widget" src="https://github.com/ip-repo/guides/assets/123945379/0f74706e-d949-4357-aa7a-0237c2f1f31a">
+
+You can listen to a text to speech by gtts.
+
+[lorem.webm](https://github.com/ip-repo/guides/assets/123945379/4c29b97e-ed6f-4e29-a005-59f13b98ff1d)
+
 
 
 
