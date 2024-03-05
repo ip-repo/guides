@@ -146,6 +146,7 @@ if __name__ == '__main__':
 </details>
 </details>
 
+## Gtts widget
 So, we have seen three engines that we can use (there are more..) and each engines has its own functionality and limitation.
 The first widget can be found in the file `gtts_widget_run.py` if you have installed the neccesary modules just run the it.
 ```console
@@ -161,6 +162,12 @@ You can listen to a text to speech by gtts.
 
 [lorem.webm](https://github.com/ip-repo/guides/assets/123945379/4c29b97e-ed6f-4e29-a005-59f13b98ff1d)
 
+## QTextToSpeech widget
+Qt has a nice text to speech engine but in the current version (6.6.2) it only allow to speak text.
+This engine allow to change the pitch, volume and voices and it also work in offline mode.
+It does over some signals like sayingWord that emit's the current word that the engine speak and this can help us to make more creative programs.
+
+<img width="425" alt="qt_widget" src="https://github.com/ip-repo/guides/assets/123945379/90bf4531-2e1c-4d13-97b1-cebe993447fd">
 
 
 
