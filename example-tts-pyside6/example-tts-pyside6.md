@@ -98,6 +98,47 @@ python pytts_cli.py 150 10.0 1 hello world
 
 ```
 </details>
+<details>
+	<summary>QTextToSpeech</summary>
+	
+A quick text to speech widget with.
+
+```python
+from PySide6.QtTextToSpeech import QTextToSpeech
+from PySide6.QtWidgets import QApplication, QPushButton, QTextEdit, QVBoxLayout, QWidget,QStyleFactory
+
+
+
+def speak_text():
+	speech.say(text_edit.toPlainText())
+
+def handle_speech_state(state: QTextToSpeech.State):
+	if state == QTextToSpeech.State.Ready:
+		speak_btn.setEnabled(True)
+	else:
+		speak_btn.setEnabled(False)
+
+if __name__ == '__main__':
+	app = QApplication([])
+	app.setStyle(QStyleFactory.keys()[2])
+	
+	speech = QTextToSpeech()
+	widget = QWidget()
+	text_edit = QTextEdit()
+	speak_btn = QPushButton("speak")
+	layout = QVBoxLayout()
+	layout.addWidget(text_edit)
+	layout.addWidget(speak_btn)
+	widget.setLayout(layout)
+	
+	speech.stateChanged.connect(handle_speech_state)
+	speak_btn.clicked.connect( speak_text)
+	
+	widget.show()
+	app.exec()
+
+```
+</details>
 </details>
 <details><summary>Gtts Widget</summary>
 	
