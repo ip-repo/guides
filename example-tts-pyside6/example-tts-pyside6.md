@@ -167,7 +167,8 @@ Qt has a nice text to speech engine but in the current version (6.6.2) it only a
 This engine allow to change the pitch, volume and voices and it also work in offline mode.
 It does over some signals like sayingWord that emit's the current word that the engine speak and this can help us to make more creative programs.
 
-<img width="425" alt="qt_widget" src="https://github.com/ip-repo/guides/assets/123945379/90bf4531-2e1c-4d13-97b1-cebe993447fd">
+<img width="416" alt="qt_widget" src="https://github.com/ip-repo/guides/assets/123945379/cac24ab2-2e77-48dc-a2e4-4102fd5d45fd">
+
 
 
 
