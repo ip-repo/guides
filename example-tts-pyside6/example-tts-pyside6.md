@@ -10,7 +10,8 @@ Lets test different text to speech engines and build a pyside6 widget around the
 
 You can try to listen to a conversation between two people trying to figure out how to create tts widgets.
 
-[summary_speech.webm](https://github.com/ip-repo/guides/assets/123945379/14f7f8b5-6822-48ce-bb91-b3de7bcd3596)
+[PLAYME.webm](https://github.com/ip-repo/guides/assets/123945379/ee6bfedc-ce0e-4b41-aef6-74e49bb5aedd)
+
 
 <details><summary>Before we start</summary>
 If you want to use this example files follow the instructions:
