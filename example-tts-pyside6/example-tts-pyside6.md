@@ -26,9 +26,11 @@ pip install gtts #2.5.1
 
 </details>
 
-<details><summary>Quick gtts overview</summary>
+<details><summary>Quick engines basic usage</summary>
 
-Basic usage
+<details><summary>gtts</summary>
+	
+gtts can be used as a cli.
 ```
 #convert txt file to audio
 gtts-cli "Hello world" --output hello-world.mp3
@@ -63,6 +65,39 @@ myobj = gTTS(text=mytext, lang=language, slow=False)
 myobj.save("vietnamese.mp3")
 
 ```
+
+</details>
+<details>
+	<summary>Pyttsx3</summary>
+
+Using pyttsx3 from command line.
+
+```python
+import pyttsx3
+import sys
+def main():
+	#pyttsx3 tts engine
+	engine = pyttsx3.init()
+	#get engine properties
+	rate = int(sys.argv[1]) #rate:  0 - 200
+	volume = float(sys.argv[2]) / 10.0 #volume 0.0 - 10.0
+	voice  = int(sys.argv[3]) #depend on installed voices usally 0 or 1
+	engine.setProperty("rate",rate)
+	engine.setProperty("volume", volume)
+	engine.setProperty("voice",engine.getProperty("voices")[voice].id)
+	text = " " .join(sys.argv[4:])
+	#speak
+	engine.say(text)
+	engine.runAndWait()
+if __name__ == "__main__":
+	main()
+```
+Now we can use it from terminal.
+```console
+python pytts_cli.py 150 10.0 1 hello world
+
+```
+</details>
 </details>
 <details><summary>Gtts Widget</summary>
 	
