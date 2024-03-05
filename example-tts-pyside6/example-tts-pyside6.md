@@ -85,7 +85,7 @@ def main():
 	engine.setProperty("rate",rate)
 	engine.setProperty("volume", volume)
 	engine.setProperty("voice",engine.getProperty("voices")[voice].id)
-	text = " " .join(sys.argv[4:])
+	text = " ".join(sys.argv[4:])
 	#speak
 	engine.say(text)
 	engine.runAndWait()
