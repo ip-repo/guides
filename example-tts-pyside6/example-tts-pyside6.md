@@ -148,7 +148,7 @@ if __name__ == '__main__':
 
 ## Gtts widget
 So, we have seen three engines that we can use (there are more..) and each engines has its own functionality and limitation.
-The first widget can be found in the file `gtts_widget_run.py` if you have installed the neccesary modules just run the it.
+The first widget can be found in the file <a href="https://github.com/ip-repo/guides/blob/main/example-tts-pyside6/gtts_widget_run.py">`gtts_widget_run.py`</a> if you have installed the neccesary modules just run the it.
 ```console
 python gtts_widget_run.py
 ```
@@ -163,6 +163,10 @@ You can listen to the result by gtts.
 [lorem.webm](https://github.com/ip-repo/guides/assets/123945379/4c29b97e-ed6f-4e29-a005-59f13b98ff1d)
 
 ## QTextToSpeech widget
+This widget can found in the file <a href="https://github.com/ip-repo/guides/blob/main/example-tts-pyside6/qt_widget_run.py">`qt_widget_run.py`</a>.
+```console
+python qt_widget_run.py
+```
 Qt has a nice text to speech engine but in the current version (6.6.2) it only allow to speak text.
 This engine allow to change the pitch ,rate and volume and voices and it also work in offline mode.
 It does over some signals like sayingWord that emit's the current word that the engine speak and this can help us to make more creative programs.
@@ -170,7 +174,10 @@ It does over some signals like sayingWord that emit's the current word that the 
 <img width="416" alt="qt_widget" src="https://github.com/ip-repo/guides/assets/123945379/cac24ab2-2e77-48dc-a2e4-4102fd5d45fd">
 
 ## Pyttsx3 widget
-
+And this widget is in the file <a href="https://github.com/ip-repo/guides/blob/main/example-tts-pyside6/pyttsx_widget_run.py">`pyttsx_widget_run.py`</a>.
+```console
+python pyttsx_widget_run.py
+```
 Pyttsx3 is a simple engine that use locally installed voices and can run offline.
 The settings that can be changes are: rate, voice, volume and pitch.
 The widget allow user to save text as speech. 
