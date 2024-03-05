@@ -197,4 +197,4 @@ You can listen to the result by pyttsx3.
   
 You can also explore other text to speech projects on this github:
 - <a href="https://github.com/ip-repo/text-to-speech-webpage/blob/main/README.md">Text to Speech webpage</a>
-- <a href="https://github.com/ip-repo/conversationmaker/blob/main/README.md">PySide6 Conversation Maker</a>
+- <a href="https://github.com/ip-repo/conversation-maker/blob/main/README.md">PySide6 Conversation Maker</a>
