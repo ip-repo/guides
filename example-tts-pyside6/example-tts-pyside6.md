@@ -158,7 +158,7 @@ For longer tasks it might be wise to user qrunnables or qthreads.
 
 <img width="451" alt="gtts_widget" src="https://github.com/ip-repo/guides/assets/123945379/0f74706e-d949-4357-aa7a-0237c2f1f31a">
 
-You can listen to a text to speech by gtts.
+You can listen to the result by gtts.
 
 [lorem.webm](https://github.com/ip-repo/guides/assets/123945379/4c29b97e-ed6f-4e29-a005-59f13b98ff1d)
 
@@ -169,7 +169,15 @@ It does over some signals like sayingWord that emit's the current word that the 
 
 <img width="416" alt="qt_widget" src="https://github.com/ip-repo/guides/assets/123945379/cac24ab2-2e77-48dc-a2e4-4102fd5d45fd">
 
+## Pyttsx3 widget
 
+Pyttsx3 is a simple engine that use locally installed voices and can run offline.
+The settings that can be changes are: rate, voice, volume and pitch.
+The widget allow user to save text as speech. 
 
+<img width="492" alt="pyttsx3_widget" src="https://github.com/ip-repo/guides/assets/123945379/88937d1d-aafc-47dc-a536-80b60fa86e1a">
 
+You can listen to the result by pyttsx3.
+
+[lorem1.webm](https://github.com/ip-repo/guides/assets/123945379/540565e2-3a17-47f1-b59c-d4b9ed1319ac)
 
