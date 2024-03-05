@@ -6,12 +6,14 @@
 
 
 # Example: text to speech widget with different engines
+Lets test different text to speech engines and build a pyside6 widget around them.
 
 You can try to listen to a conversation between two people trying to figure out how to create tts widgets.
 
 [summary_speech.webm](https://github.com/ip-repo/guides/assets/123945379/14f7f8b5-6822-48ce-bb91-b3de7bcd3596)
 
 <details><summary>Before we start</summary>
+If you want to use this example files follow the instructions:
 
 First we need to install to python libraries: PySide6 and gtts.
 ```
@@ -22,6 +24,9 @@ python -m venv ttsv
 ttsv\Scripts\activate
 pip install PySide6 #6.6.2
 pip install gtts #2.5.1
+pip install pyttsx3 #2.90
+# now you can run the scripts of the example:
+python gtts_widget_run.py
 ```
 
 </details>
