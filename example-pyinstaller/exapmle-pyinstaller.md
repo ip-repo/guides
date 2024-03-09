@@ -45,6 +45,6 @@ Now we can use pyinstaller make sure you in the same directory as `media_devices
 ```cosnole
 pyinstaller --onefile -w --clean --add-data "assets:assets" --icon=app.ico  media_devices.py
 ```
-You will be able to find the exe version in the directory `dist` andit will be named `media_devices.exe`
+You will be able to find the exe version in the directory `dist` and it will be named `media_devices.exe`
 
 <a href="https://pyinstaller.org/" >If you want to learn more about pyinstaller your can click here</a>
