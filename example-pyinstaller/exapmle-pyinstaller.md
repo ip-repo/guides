@@ -21,7 +21,7 @@ The structure of the project directory look something like this:
 assets
 main.py
 ```
-The `assets` directory holds the app images so we will need a way to inforam pyinstaller to inculde that directory when creating the exe.<br>
+The `assets` directory holds the app images so we will need a way to inform pyinstaller to inculde that directory when creating the exe.<br>
 In the script we will create a function that handles paths so that the porgram will able to find to paths to app assets either when runed 
 as a script or as an exe.
 
