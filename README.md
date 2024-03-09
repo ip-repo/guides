@@ -26,6 +26,7 @@ README.md
 * <a href="https://github.com/ip-repo/guides/blob/main/simple-command-server-client/command-client-server.md">How to shutdown windows pc from android phone with termux </a>
 
 * <a href="https://github.com/ip-repo/guides/blob/main/example-tts-pyside6/example-tts-pyside6.md">Example: text to speech widgets with PySide6 </a>
+* <a href="https://github.com/ip-repo/guides/blob/main/example-pyinstaller/exapmle-pyinstaller.md">Example: Pyinstaller and PySide6 </a>
 
 
 <hr>
