@@ -46,4 +46,4 @@ pyinstaller --onefile -w --clean --add-data "assets:assets" --icon=app.ico  medi
 ```
 You will be able to find the exe version in the directory `dist` and it will be named `media_devices.exe`
 
-<a href="https://pyinstaller.org/" >If you want to learn more about pyinstaller your can click here</a>
+<a href="https://pyinstaller.org/" >If you want to learn more about pyinstaller you can click here</a>
