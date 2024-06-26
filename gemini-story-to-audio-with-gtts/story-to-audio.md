@@ -17,7 +17,7 @@ genai.configure(api_key="YOUR-API-KEY-GOES-HERE")
 # Choose model
 model = genai.GenerativeModel('gemini-1.5-flash')
 
-# User generate_content method to generate text
+# Usr generate_content method to generate text
 response = model.generate_content("Write a story about a turtle called Dave discovering physics laws.")
 
 # Pass to gtts engine the respone text
