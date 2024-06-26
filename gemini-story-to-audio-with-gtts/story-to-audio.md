@@ -26,3 +26,6 @@ tts = gTTS(text=response.text, lang='en')
 # Save the generated speech to an MP3 file
 tts.save("Dave-the-turtle.mp3")
 ````
+The story : 
+[Dave-the-turtle.webm](https://github.com/ip-repo/guides/assets/123945379/7efe9913-c09e-49c8-98b4-029d3339b1bc)
+
