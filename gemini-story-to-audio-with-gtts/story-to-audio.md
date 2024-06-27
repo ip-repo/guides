@@ -30,3 +30,7 @@ The story :
 
 [Dave-the-turtle.webm](https://github.com/ip-repo/guides/assets/123945379/7efe9913-c09e-49c8-98b4-029d3339b1bc)
 
+You can also explore other text to speech projects on this github:
+
+- <a href="https://github.com/ip-repo/conversation-maker/blob/main/README.md">PySide6 Conversation Maker</a>
+- <a href="https://github.com/ip-repo/guides/blob/main/example-tts-pyside6/example-tts-pyside6.md">Different pyside6 widgets with different tts engines</a>
