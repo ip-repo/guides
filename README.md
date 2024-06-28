@@ -27,7 +27,7 @@ README.md
 
 * <a href="https://github.com/ip-repo/guides/blob/main/example-tts-pyside6/example-tts-pyside6.md">Example: text to speech widgets with PySide6 </a>
 * <a href="https://github.com/ip-repo/guides/blob/main/example-pyinstaller/exapmle-pyinstaller.md">Example: Pyinstaller and PySide6 </a>
-* <a href="https://github.com/ip-repo/guides/blob/main/gemini-story-to-audio-with-gtts/story-to-audio.md"> Example: generate a story with Gemnini and use gtts to create a audio story </a>
+* <a href="https://github.com/ip-repo/guides/blob/main/gemini-story-to-audio-with-gtts/story-to-audio.md"> Example: generate a story with Gemini and use gtts to create a audio story </a>
 
 <hr>
 <a href="https://github.com/ip-repo/python/blob/main/README.md">click here for more python programs </a>
