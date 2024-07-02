@@ -31,4 +31,4 @@ README.md
 * <a href="https://github.com/ip-repo/guides/blob/main/generate-conversation-bark-gemini/generate-a-conversation-with-bark-and-gemini.md"> Generate a conversation with Gemini and Bark</a>
 
 <hr>
-<a href="https://github.com/ip-repo/python/blob/main/README.md">click here for more python programs </a>
+<a href="https://github.com/ip-repo/python/blob/main/README.md">Example: click here for more python programs </a>
