@@ -1,7 +1,7 @@
 # Using python and Sonic-Pi to play notes while typing  😊🎵🎹
 
-So Sonic Pi is a cool program that allow a user to create music with code and even allow to live code.
-In this short guide we will see how to send data which will be notes from a python script to sonic pi and play them.
+So Sonic Pi is a cool program that allow a user to create music with code and even allow to live code.<br>
+In this short guide we will see how to send data which will be notes from a python script to sonic pi and play them.<br>
 The idea is to use `pynput` to listen to the keyboard and each time a on_press event occur then we will send a random
 note to play on sonic py. This kind of code will create a musical effect that we can use for example  when writing a how-to guide in a cool vibe.  
 
@@ -14,7 +14,7 @@ Dependencies:
 pip install pynput #1.7.7
 pip install python-osc # 1.8.3
 ```
-Good, now that we have everthing installed , launch Sonic pi and add the following code:
+Good, now that we have everthing installed, launch Sonic pi and add the following code:
 
 ```sonic-pi
 # play the note recived on osc
