@@ -46,9 +46,6 @@ def send_random_notes_to_sonic_pi(key):
     sender.send_message('/trigger/keystroke', random_note)
     print(f"Key pressed:{key}",f"Note sent:{random_note}")
    
-
-# Use Keyboard Listener and listen for the on_press event
-# When the on_press event occurs, call the send_random_notes_to_sonic_pi function
 if __name__ == "__main__":
     # Your local adress
     local_adress = "127.0.0.1"
