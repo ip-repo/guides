@@ -3,7 +3,7 @@ So in this example were going to create a conversation between a woman and a man
 
 To generate the conversation text we will use gemini and to create the conversation audio we will use <a href="https://github.com/suno-ai/bark">bark transformer-based text-to-audio model</a>.
 
-The part in the code realted to bark come's from there long audio examples which you can find if you <a href="https://github.com/suno-ai/bark/blob/main/notebooks/long_form_generation.ipynb">click here.</a>
+The part in the code realted to bark come's from their long audio examples which you can find if you <a href="https://github.com/suno-ai/bark/blob/main/notebooks/long_form_generation.ipynb">click here.</a>
 
 Dependencies:
 ```console
