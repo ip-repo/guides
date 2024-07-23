@@ -35,7 +35,7 @@ import random
 
 def send_random_notes_to_sonic_pi(key):
     """
-    This function is called when over a key is pressed, each time 
+    This function is called when a key is pressed, each time 
     a random note will be sent to the sonic pi live_loop that is waiting for data
     and the note will be played in sonic pi.
     """
