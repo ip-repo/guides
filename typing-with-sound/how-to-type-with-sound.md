@@ -52,7 +52,7 @@ if __name__ == "__main__":
     # Sonic Pi default OSC port
     osc_sonic_pi_port = 4560
     # Establishe a connection between python script and Sonic Pi using the UDP protocol
-    sender = udp_client.SimpleUDPClient('127.0.0.1', 4560)
+    sender = udp_client.SimpleUDPClient(local_adress, osc_sonic_pi_port)
     # Open Keyboard listener and each time a key is pressed call the function send_random_notes_to_sonic_pi
     with Listener(on_press=send_random_notes_to_sonic_pi) as l:
         l.join()
